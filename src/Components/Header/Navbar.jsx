@@ -3,14 +3,16 @@ import { Link } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-    <Link to='/'> <li className='m-2'>Home</li></Link>
-    <Link to='/about'><li className='m-2'>About</li></Link>
-    <Link to='/readlist'><li className='m-2'>ReadList</li></Link>
+    <Link to='/'> <li className='m-2 border border-green-600 p-2 text-green-500 rounded-lg font-bold'>Home</li></Link>
+   <div className='flex justify-center items-center'>
+     <Link to='/about'><li className='m-2 font-bold'>About</li></Link>
+    <Link to='/readlist'><li className='m-2 font-bold'>ReadList</li></Link>
 
+   </div>
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-100 shadow-sm rounded-lg mt-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,15 +24,16 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Boipoka</a>
+    <a className="btn btn-ghost text-xl font-bold">Boipoka</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
    {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-2">
+    <a className='btn bg-green-500 text-white rounded-lg'>Sign In</a>
+    <a className="btn bg-[#59C6D2] text-white rounded-lg">Sign Up</a>
   </div>
 </div>
         </div>
